@@ -18,7 +18,9 @@ public class Product {
     public double price;
     
     //constructor?
-    // public Product(){}
+    // public Product(){
+    //     Product product = new Product(); xxxxxxxxxxxxxxxxx   
+    // }
 
 
     public Product(String ID, String name, String brand, double price){
