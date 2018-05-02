@@ -15,6 +15,11 @@ public class Company {
 	private String contact;
 	private String addr;
 
+	public Company (){
+		name = new String();
+		contact = new String();
+		addr = new String();
+	}
 	public Company(String name, String contact, String addr){
 		this.name = name;
 		this.contact = contact;

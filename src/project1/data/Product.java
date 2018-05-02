@@ -30,6 +30,13 @@ public class Product {
         this.price = price;
     }
 
+    Product() {
+        ID = "null";
+        name = "null";
+        brand = "null";
+        price = 0.0;
+    }
+
     public double getPrice(){
         return price;
     }
