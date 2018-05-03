@@ -10,19 +10,26 @@ package project1.data;
  * @author Transpar
  */
 public class Needed extends Record{
-	private Product product;
-	private int quantity;
+	// private Product product;
+	// private int quantity;
 
-	public Needed(Product product, int quantity){
-		this.product = product;
-		this.quantity = quantity;
-	}
+	// public Needed(Product product, int quantity){
+	// 	this.product = product;
+	// 	this.quantity = quantity;
+	// }
 
-	public int getQuantity(){
-		return quantity;
-	}
+	// public int getQuantity(){
+	// 	return quantity;
+	// }
 
-	public	Product getProduct(){
-		return product;
+	public void setPrice(double purchasePrice){
+		product.price = purchasePrice;
+		// return product.getPrice();
 	}
+	
+	
+	// public Product getProduct(){
+	// 	return product;
+	// }
+
 }

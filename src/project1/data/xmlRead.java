@@ -6,10 +6,15 @@
 package project1.data;
 
 import java.util.List;
+import java.util.jar.Attributes.Name;
+
+import org.xml.sax.SAXException;
 
 // import java.util.Map;
 
 import org.xml.sax.helpers.DefaultHandler;
+import project1.data.Dealer;
+import project1.data.Needed;
 
 /**
  *
@@ -17,38 +22,50 @@ import org.xml.sax.helpers.DefaultHandler;
  */
 public class xmlRead extends DefaultHandler{
 	private String filepath ;
-	// private boolean isSoldRecordXml;
-	// private boolean isNotChecked;
-	// private List<Record> recordList ;
-	// private Map<int, Object> formtype = {}
-	// private final Enum formtype = {};
+	private Dealer dealerData;
+	private Needed tempNeeded;
+	private Sold tempSold;
+	private Company tempCompany;
+	private String tempChar;
 
-
+	    
+//	private Needed aNeeded;
+//	private Soled aSoled;
+//	private 
 	public xmlRead(String filepath){
 		this.filepath = filepath;
-		// isNotChecked = 1;
+        dealerData = new Dealer();
+		tempNeeded = new Needed();
+		tempSold = new Sold();
+		tempCompany = new Company();
+		tempChar = new String();
 		// accumulator = new StringBuffer();
 		// fact = SAXParserFactory.newInstance();
 		// saxPar = fact.newSAXParser();
+                
 	}
 	      
     public void characters(char[] buffer, int start, int length) {
-		
-		// return new String(buffer, start, length);
+		tempChar = new String(buffer, start, length);
 	}
 	
 	public void startElement(String uri,String lname, String name, Attributes attributes){
+		//	dealerData.neededList.add(new Needed());  protected
 
 		switch (name) {
 			case "Company":
-				
+				// if
+                // dealerData.companyInfo.name = 
 				break;
 			case "Record":
 				if(name == "Needed"){
-					
-					if (condition) {
-						
-					}
+					String s = new String();
+                                        s = dealerData.getName();
+//					if (condition) {
+//
+//					}
+				}else{
+
 				}
 				break;
 			case "Product":
@@ -64,7 +81,14 @@ public class xmlRead extends DefaultHandler{
 	}
 
 	public void endElement(String uri,String lname,String name){
-	
+		switch (name) {
+			case "Company":
+				
+				break;
+		
+			default:
+				break;
+		}
 	}
 
 

@@ -11,9 +11,9 @@ package project1.data;
  * @author Transpar
  */
 public class Company {
-	private String name;
-	private String contact;
-	private String addr;
+	protected String name;
+	protected String contact;
+	protected String addr;
 
 	public Company (){
 		name = new String();

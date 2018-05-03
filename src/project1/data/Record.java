@@ -10,24 +10,25 @@ package project1.data;
  * @author Transpar
  */
 public class Record {
-    private Product product;
+    protected Product product;
     private int quantity;
-    
-    // public Record(Product product , int quantity){
-    //     this.product = product;
-	//     this.quantity = quantity;
-    // }
     
     public Record(){
         this.product = new Product();
         this.quantity = -1;
+    }
+    
+    public Record(Product product , int quantity){
+        this.product = product;
+        this.quantity = quantity;
     }
 
     public int getQuantity(){
 		return quantity;
 	}
 
-    public Product getProduct(){
-	    return product;
-    }
+    // public Product getProduct(){
+	//     return product;
+    // }
+
 }

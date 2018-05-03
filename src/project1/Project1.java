@@ -16,6 +16,14 @@ public class Project1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+//						double a = new Needed.product.getPrice();
+//    Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MainF().setVisible(true);
+            }
+        });
+        // System.out.println("IMHERE");
     }
     
 }

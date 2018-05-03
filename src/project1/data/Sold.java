@@ -11,19 +11,19 @@ package project1.data;
  * @author Transpar
  */
 public class Sold extends Record{
-	private Product product;
-	private int quantity;
+	// private Product product;
+	// private int quantity;
 
-	public Sold(Product product , int quantity){
-		this.product = product;
-		this.quantity = quantity;
-	}
+	// public Sold(Product product , int quantity){
+	// 	this.product = product;
+	// 	this.quantity = quantity;
+	// }
 
-	public Product getProduct(){
-		return product;
-	}
-	public int getQuantity(){
-		return quantity;
-	}
+	// public Product getProduct(){
+	// 	return product;
+	// }
+	// public int getQuantity(){
+	// 	return quantity;
+	// }
 
 }
