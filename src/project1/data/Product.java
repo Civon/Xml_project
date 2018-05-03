@@ -11,11 +11,11 @@ package project1.data;
  * @author Transpar
  */
 public class Product {
-    private String ID;
-    private String item;
-    private String brand;    
-    double price;
-    
+    protected String ID;
+    protected String item;
+    protected String brand;    
+    protected double price;
+     
     //constructor?
     // public Product(){
     //     Product product = new Product(); xxxxxxxxxxxxxxxxx   

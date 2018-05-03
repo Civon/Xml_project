@@ -16,7 +16,7 @@ import java.util.Vector;
  * @author Transpar
  */
 public class Dealer extends Company{
-	protected Vector soldList ;
+	static protected Vector soldList ;
 	protected Vector neededList;
 	protected Company companyInfo;
         // protected Vector productList;
@@ -40,6 +40,15 @@ public class Dealer extends Company{
         public void addNeeded(Needed n){
 			soldList.add(n);
 		}
+		public Vector getSoldList(){
+			return soldList;
+		}
 
+		public Vector getNeededList(){
+			return neededList;
+		}
 		// public void addProduct(Product )
+                public static Vector getTable(){
+                    return soldList;
+                }
 }

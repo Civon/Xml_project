@@ -11,7 +11,7 @@ package project1.data;
  */
 public class Record {
     protected Product product;
-    private int quantity;
+    protected int quantity;
     
     public Record(){
         this.product = new Product();

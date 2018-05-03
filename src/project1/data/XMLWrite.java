@@ -27,25 +27,25 @@ public class xmlWrite {
 		xsw = xof.createXMLStreamWriter(sw);
 	}
 
-	public void writeStartDoc() throws XMLStreamException{
+	public void startDoc() throws XMLStreamException{
 		xsw.writeStartDocument();
 	}
 
-	public void writeStartTag(String tag) throws XMLStreamException{
+	public void startTag(String tag) throws XMLStreamException{
 		xsw.writeStartElement(tag);
 		// xsw.writeStartElement(object.getClass().getName());
 	}
 
-	public void writeStartTag(String tag, String value) throws XMLStreamException{
+	public void startTag(String tag, String value) throws XMLStreamException{
 		xsw.writeStartElement(tag);
 			xsw.writeCharacters(value);		
 	}
 
-	public void writeEndTag() throws XMLStreamException{
+	public void endTag() throws XMLStreamException{
 		xsw.writeEndElement();
 	}
 
-	public void writeClose(String filepath) throws XMLStreamException, IOException{
+	public void closeSave(String filepath) throws XMLStreamException, IOException{
 		xsw.writeEndDocument();
 		xsw.close();
 		

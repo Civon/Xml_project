@@ -5,23 +5,43 @@
  */
 package project1;
 
+import java.io.IOException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+
+
+import org.xml.sax.SAXException;
+import project1.data.Dealer;
+import project1.data.XMLRead;
+
 /**
  *
  * @author Transpar
  */
 public class Controller {
-    
+    private final String filepath = "data.xml";
+    private XMLRead read;
     
     
     public Controller(){
-    
+        
+        
     }
     
-    public void load(){
-    
+    public Dealer load() throws ParserConfigurationException, SAXException, IOException{
+        SAXParserFactory fact = SAXParserFactory.newInstance();
+	    SAXParser saxPar = fact.newSAXParser();
+        read = new XMLRead();
+        try{
+            saxPar.parse(filepath, read);
+        }catch (IOException e){
+            System.out.println("File NOT found.");
+        }
+        return read.getDealerData();
     }
     
-    public void save(){
-    
+    public void save(Dealer dealerData){
+        
     }
 }

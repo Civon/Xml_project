@@ -25,5 +25,6 @@ public class Sold extends Record{
 	// public int getQuantity(){
 	// 	return quantity;
 	// }
-
+	
+	// public Sold()
 }
