@@ -16,17 +16,18 @@ import javax.xml.stream.XMLStreamWriter;
  *
  * @author Transpar
  */
-public class xmlWrite {
+public class XMLWrite {
 	private StringWriter sw ;
 	private XMLOutputFactory xof ;
 	private XMLStreamWriter xsw ;
 
-	public xmlWrite() throws XMLStreamException {
+	public XMLWrite() throws XMLStreamException {
 		sw = new StringWriter();
 		xof = XMLOutputFactory.newInstance();
 		xsw = xof.createXMLStreamWriter(sw);
 	}
-
+        
+        
 	public void startDoc() throws XMLStreamException{
 		xsw.writeStartDocument();
 	}

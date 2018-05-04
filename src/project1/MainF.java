@@ -11,8 +11,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.stream.XMLStreamException;
 import org.xml.sax.SAXException;
 import project1.data.Dealer;
+import project1.data.Needed;
+import project1.data.Sold;
 
 /**
  *
@@ -492,12 +495,32 @@ public class MainF extends javax.swing.JFrame {
             Logger.getLogger(MainF.class.getName()).log(Level.SEVERE, null, ex);
             Logger.getLogger(MainF.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println(neededModel.getDataVector());
+        for(Object n : data.getNeededList()){
+            Needed a = (Needed)n;
+            neededModel.addRow(new Object[]{false, a.getProduct().getItem(),a.getProduct().getPrice(), a.getQuantity()});
+        }
+        for(Object n : data.getSoldList()){
+            Sold a = (Sold)n;
+            neededModel.addRow(new Object[]{false, a.getProduct().getItem(), a.getQuantity()});
+        }
+        
+//        System.out.println(neededModel.getDataVector());
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         // TODO add your handling code here:
-//        neededModel.getDataVector()
+        data = new Dealer();
+//        for()
+        
+        data.convertN(neededModel.getDataVector());
+        data.convertS(soldModel.getDataVector());
+        try {
+            controller.save(data,neededModel.getDataVector(),soldModel.getDataVector());
+//        System.out.println(neededModel.getDataVector());
+//        data.convertXML(neededModel.getDataVector());  
+        } catch (XMLStreamException ex) {
+            Logger.getLogger(MainF.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jLabel7MouseClicked
 
     int exX, exY; 
@@ -534,6 +557,7 @@ public class MainF extends javax.swing.JFrame {
                new MainF().setVisible(true);
            }
        });
+       controller.load();
        
    }
 
@@ -562,5 +586,5 @@ public class MainF extends javax.swing.JFrame {
     private javax.swing.JTable soldTable;
     // End of variables declaration//GEN-END:variables
 
-  private DefaultTableModel neededTableModel ;
+//  private DefaultTableModel neededTableModel ;
 }

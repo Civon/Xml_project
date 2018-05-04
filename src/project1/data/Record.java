@@ -27,8 +27,8 @@ public class Record {
 		return quantity;
 	}
 
-    // public Product getProduct(){
-	//     return product;
-    // }
+    public Product getProduct(){
+	    return product;
+    }
 
 }

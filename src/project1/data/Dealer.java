@@ -47,8 +47,21 @@ public class Dealer extends Company{
 		public Vector getNeededList(){
 			return neededList;
 		}
-		// public void addProduct(Product )
-                public static Vector getTable(){
-                    return soldList;
+                public  void setNeededList(Vector n){
+                    this.neededList = n;
                 }
+                public  void setSoldList(Vector n){
+                    this.soldList = n;
+                }
+                
+                public Vector convertN(Vector )
+		// public void addProduct(Product )
+//                public static Vector getTable(){
+//                    return soldList;
+//				}
+//				
+//				public static void convertXML(Vector v){
+//					
+//				}
+                
 }

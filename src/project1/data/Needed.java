@@ -28,8 +28,8 @@ public class Needed extends Record{
 	}
 	
 	
-	// public Product getProduct(){
-	// 	return product;
-	// }
+	public Product getProduct(){
+		return product;
+	}
 
 }
